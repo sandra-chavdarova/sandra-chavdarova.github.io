@@ -21,10 +21,10 @@ author: Sandra Chavdarova
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Education: "education"
+  Travels: "travels"
+  Hobbies: "hobbies"
+  Contact: "contact"
 
 ################
 # --- Logo --- #
