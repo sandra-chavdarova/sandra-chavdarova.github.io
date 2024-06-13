@@ -4,8 +4,10 @@ title: Travels
 subtitle: Some of my favorite places I have visited
 ---
 
+One of the most memorable places I have traveled to is Vienna, the capital of Austria. I went there at the end of 2022 on a trip from high school. I was mesmerized by the cathedral and luckily I got to take a photo of it as the sun was setting and the colors are breathtaking.
 
+![Vienna](/assets/img/vienna.jpg){: style="width: 50%; height: auto; display: block; margin: auto;"}
 
-### My story
+And one of the most recent places I have been to is Egypt, specifically Luxor. Despite the very high temperatures, I enjoyed every moment of it.
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+![Luxor](/assets/img/egypt.jpg){: style="width: 50%; height: auto; display: block; margin: auto;"}
