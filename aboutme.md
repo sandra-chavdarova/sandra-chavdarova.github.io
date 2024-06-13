@@ -8,6 +8,14 @@ My name is Sandra Chavdarova. I have always been interested in mathematics and p
 
 Outside of my professional interests, I enjoy diving into various hobbies. I enjoy reading books and love listening to music. When I'm not studying or reading, you can find me outdoors, jogging or taking walks, capturing moments through my phone camera.
 
-![Jogging](/assets/img/jogging.jpg){: style="width: 50%; height: auto; display: block; margin: auto;"}
+<div style="display: flex; justify-content: center;">
 
-![Reading](/assets/img/reading.jpg){: style="width: 50%; height: auto; display: block; margin: auto;"}
+  <div style="flex: 1; margin-right: 10px;">
+    ![Jogging](/assets/img/jogging.jpg){: style="width: 100%; height: auto;"}
+  </div>
+
+  <div style="flex: 1; margin-left: 10px;">
+    ![Reading](/assets/img/reading.jpg){: style="width: 100%; height: auto;"}
+  </div>
+
+</div>
