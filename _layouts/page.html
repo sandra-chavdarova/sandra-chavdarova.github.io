@@ -2,11 +2,35 @@
 layout: base
 ---
 
-{% include header.html type="page" %}
+{% include header.html type="post" %}
 
 <main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
+
+      {% if page.gh-repo %}
+        {% assign gh_split =  page.gh-repo | split:'/' %}
+        {% assign gh_user =  gh_split[0] %}
+        {% assign gh_repo =  gh_split[1] %}
+
+        <div id="header-gh-btns">
+          {% if page.gh-badge.size > 0 %}
+            {% for badge in page.gh-badge %}
+              {% case badge %}
+                {% when 'star' %}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'watch' %}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'fork' %}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'follow' %}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              {% endcase %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      {% endif %}
+
       {% if page.before-content %}
         <div class="before-content">
           {% for file in page.before-content %}
@@ -15,7 +39,18 @@ layout: base
         </div>
       {% endif %}
 
-      {{ content }}
+      <div class="blog-post">
+        {{ content }}
+      </div>
+
+      {% if page.tags.size > 0 %}
+        <div class="blog-tags">
+          <span>Tags:</span>
+          {% for tag in page.tags %}
+            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
 
       {% if page.after-content %}
         <div class="after-content">
@@ -25,6 +60,95 @@ layout: base
         </div>
       {% endif %}
 
+      {% if page.social-share %}
+        {% include social-share.html %}
+      {% endif %}
+
+      <!-- Removed pagination links to prevent navigation to other posts -->
+      
+      {% include comments.html %}
+    </div>
+  </div>
+</main>
+In this version:
+
+I removed the pagination block that included links to the previous and next posts, which you identified as unnecessary.
+The main structure of the post content display remains intact, ensuring that the post content is shown without navigation links.
+i dont want when clicking on the title for it to take me to a special page for the post, i just want the text to be displayed as is with no links to the post, or to a previous or to a next post
+ChatGPT
+Understood. To achieve this, you need to ensure that the title of the post is not linked to its permalink and remove any navigation links. Here is the updated code:
+
+html
+Copy code
+---
+layout: base
+---
+
+{% include header.html type="post" %}
+
+<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+  <div class="row">
+    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
+
+      {% if page.gh-repo %}
+        {% assign gh_split = page.gh-repo | split:'/' %}
+        {% assign gh_user = gh_split[0] %}
+        {% assign gh_repo = gh_split[1] %}
+
+        <div id="header-gh-btns">
+          {% if page.gh-badge.size > 0 %}
+            {% for badge in page.gh-badge %}
+              {% case badge %}
+                {% when 'star' %}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'watch' %}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'fork' %}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'follow' %}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              {% endcase %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if page.before-content %}
+        <div class="before-content">
+          {% for file in page.before-content %}
+            {% include {{ file }} %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <div class="blog-post">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+
+      {% if page.tags.size > 0 %}
+        <div class="blog-tags">
+          <span>Tags:</span>
+          {% for tag in page.tags %}
+            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if page.after-content %}
+        <div class="after-content">
+          {% for file in page.after-content %}
+            {% include {{ file }} %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if page.social-share %}
+        {% include social-share.html %}
+      {% endif %}
+
+      <!-- Removed pagination links to prevent navigation to other posts -->
+      
       {% include comments.html %}
     </div>
   </div>
