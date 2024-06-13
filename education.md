@@ -4,13 +4,7 @@ title: Education
 subtitle: Where I learned everything I know
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I spent my high school days in SUGSG Orce Nikolov. Among all of the subjects, I mostly learned mathematics and the basics of programming there.
+After I graduated high school in 2023, I started university at The Faculty of Computer Science and Engineering (FCSE) within the UKIM. My major is Software Engineering and Information Systems. 
 
-- I rock a great mustache
-- I'm extremely loyal to my family
 
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
