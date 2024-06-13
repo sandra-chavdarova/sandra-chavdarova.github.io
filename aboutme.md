@@ -11,11 +11,13 @@ Outside of my professional interests, I enjoy diving into various hobbies. I enj
 <div style="display: flex; justify-content: center;">
 
   <div style="flex: 1; margin-right: 10px;">
-    ![Jogging](/assets/img/jogging.jpg){: style="width: 100%; height: auto;"}
+   ![Jogging](/assets/img/jogging.jpg){: style="width: 50%; height: auto; display: block; margin: auto;"}
   </div>
 
   <div style="flex: 1; margin-left: 10px;">
-    ![Reading](/assets/img/reading.jpg){: style="width: 100%; height: auto;"}
+    ![Reading](/assets/img/reading.jpg){: style="width: 50%; height: auto; display: block; margin: auto;"}
   </div>
 
 </div>
+
+
