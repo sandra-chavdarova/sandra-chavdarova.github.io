@@ -4,13 +4,7 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Sandra Chavdarova. I have always been interested in mathematics and programming, that has lead to attending The Faculty of Computer Science and Engineering, majoring in Software Engineering and Information Systems.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Outside of my professional interests, I enjoy diving into various hobbies. I enjoy reading books and love listening to music. When I'm not studying or reading, you can find me outdoors, jogging or taking walks, capturing moments through my phone camera.
 
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
