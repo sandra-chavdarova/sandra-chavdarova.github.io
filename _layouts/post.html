@@ -48,7 +48,7 @@ layout: base
         <div class="blog-tags">
           <span>Tags:</span>
           {% for tag in page.tags %}
-            <span>{{- tag -}}</span>{% if forloop.last == false %}, {% endif %}
+            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
           {% endfor %}
         </div>
       {% endif %}
@@ -64,6 +64,8 @@ layout: base
       {% if page.social-share %}
         {% include social-share.html %}
       {% endif %}
+
+      <!-- Removed pagination links to prevent navigation to other posts -->
       
       {% include comments.html %}
     </div>
