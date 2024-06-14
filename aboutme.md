@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle:
+subtitle: A summary about me
 ---
 
 My name is Sandra Chavdarova. I have always been interested in mathematics and programming, that has lead to attending The Faculty of Computer Science and Engineering, majoring in Software Engineering and Information Systems.
