@@ -1,3 +1,4 @@
+<!--
 ---
 layout: base
 ---
@@ -83,6 +84,37 @@ layout: base
         {% endif %}
       </ul>
       {% include comments.html %}
+    </div>
+  </div>
+</main>
+-->
+---
+layout: base
+---
+
+{% include header.html type="page" %}
+
+<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+  <div class="row">
+    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
+
+      <!-- Content specific to home page -->
+      <div class="home-content">
+        {% if page.title %}
+          <div class="page-heading">
+            <h1>{{ page.title }}</h1>
+          </div>
+        {% endif %}
+        {% if page.subtitle %}
+          <div class="page-subheading">
+            <h2>{{ page.subtitle }}</h2>
+          </div>
+        {% endif %}
+        {{ content }}
+      </div>
+
+      <!-- Optionally, you can include other home-specific content here -->
+
     </div>
   </div>
 </main>
