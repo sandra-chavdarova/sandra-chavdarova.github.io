@@ -2,79 +2,6 @@
 layout: base
 ---
 
-{% include header.html type="home" %}
-
-<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
-  <div class="row">
-    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
-
-      {% if page.before-content %}
-        <div class="before-content">
-          {% for file in page.before-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      <!-- Displaying Posts -->
-      {% for post in paginator.posts %}
-        <div class="blog-post">
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-          <p>{{ post.excerpt | markdownify }}</p>
-        </div>
-      {% endfor %}
-
-      {% if page.tags.size > 0 %}
-        <div class="blog-tags">
-          <span>Tags:</span>
-          {% for tag in page.tags %}
-            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      {% if page.after-content %}
-        <div class="after-content">
-          {% for file in page.after-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      {% if page.social-share %}
-        {% include social-share.html %}
-      {% endif %}
-
-      <ul class="pagination blog-pager">
-        {% if paginator.previous_page %}
-          <li class="page-item previous">
-            <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">
-              <i class="fas fa-arrow-left"></i>
-              <span class="d-none d-sm-inline-block">Previous</span>
-            </a>
-          </li>
-        {% endif %}
-
-        {% if paginator.next_page %}
-          <li class="page-item next">
-            <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">
-              <span class="d-none d-sm-inline-block">Next</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </li>
-        {% endif %}
-      </ul>
-      
-      {% include comments.html %}
-    </div>
-  </div>
-</main>
-
-<!--
----
-layout: base
----
-
 {% include header.html type="post" %}
 
 <main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
@@ -140,7 +67,7 @@ layout: base
       <ul class="pagination blog-pager">
         {% if page.previous.url %}
         <li class="page-item previous">
-          <a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">
+          <a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | xml_escape}}">
             <i class="fas fa-arrow-left" alt="Previous Post"></i>
             <span class="d-none d-sm-inline-block">Previous Post</span>
           </a>
@@ -148,7 +75,7 @@ layout: base
         {% endif %}
         {% if page.next.url %}
         <li class="page-item next">
-          <a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">
+          <a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | xml_escape}}">
             <span class="d-none d-sm-inline-block">Next Post</span>
             <i class="fas fa-arrow-right" alt="Next Post"></i>
           </a>
@@ -159,5 +86,3 @@ layout: base
     </div>
   </div>
 </main>
-
--->
