@@ -10,13 +10,13 @@ Outside of my professional interests, I enjoy diving into various hobbies. I enj
 
 
 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <div style="width: 25%; margin: 10px;">
+    <div style="width: 32%; margin: 10px;">
         <img src="/assets/img/matka.jpg" alt="Matka" style="width: 100%; height: auto; display: block; margin: auto; border-radius: 20px;">
     </div>
-    <div style="width: 50%; margin: 10px;">
+    <div style="width: 32%; margin: 10px;">
         <img src="/assets/img/sunset.jpg" alt="Sunset" style="width: 100%; height: auto; display: block; margin: auto; border-radius: 20px;">
     </div>
-    <div style="width: 25%; margin: 10px;">
+    <div style="width: 32%; margin: 10px;">
         <img src="/assets/img/flowers.jpg" alt="Flower tree" style="width: 100%; height: auto; display: block; margin: auto; border-radius: 20px;">
     </div>
 </div>
