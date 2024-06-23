@@ -8,6 +8,6 @@ I spent my high school days in SUGSG Orce Nikolov. Among all of the subjects, I 
 
 ![High School](/assets/img/high-school-image.jpg){: style="width: 50%; height: auto; display: block; margin: auto;"}
 
-After I graduated high school in 2023, I started university at The Faculty of Computer Science and Engineering (FCSE) within the UKIM. My major is Software Engineering and Information Systems.
+After I graduated high school in 2023, I started university at The Faculty of Computer Science and Engineering (FCSE) within the The Ss. Cyril and Methodius University. My major is Software Engineering and Information Systems.
 
 ![University](/assets/img/university-image.jpg){: style="width: 50%; height: auto; display: block; margin: auto;"}
